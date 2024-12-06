@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishlist de Natal</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fef6e4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #c70039;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .wishlist {
+      list-style: none;
+      padding: 0;
+    }
+
+    .wishlist li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      background: #fafafa;
+    }
+
+    .wishlist li img {
+      width: 50px;
+      height: 50px;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .wishlist li span {
+      flex: 1;
+    }
+
+    .wishlist li.completed {
+      text-decoration: line-through;
+      background-color: #d3f8e2;
+    }
+
+    button {
+      background-color: #c70039;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    button:hover {
+      background-color: #a60030;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #c70039;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Minha Wishlist de Natal 🎁</h1>
+    <p>Presentes que gostaria de ganhar este natal</p>
+  </header>
+  <main>
+    <ul class="wishlist">
+      <li>
+        <img src="https://th.bing.com/th/id/OIP.ZzUI2wPfIoq5X90F9GKM5gHaHa?rs=1&pid=ImgDetMain" alt="Camiseta">
+        <span><a href = "https://eu.stussy.com/collections/hoodies/products/1925000-basic-stussy-hoodie-black" target="_blank"> Sweat da Stussy </a></span>
+        <button onclick="markAsCompleted(this)">Já comprei!</button>
+      </li>
+      <li>
+        <img src="https://cdn.shopify.com/s/files/1/0263/7450/4502/files/nude-3_800x.png?v=1709207743" alt="Livro">
+        <span><a href = "https://nude-project.com/pt-pt/collections/hoodies-nude/products/cherry-hood-black" target="_blank"> Sweat da Nude Project </a></span>
+        <button onclick="markAsCompleted(this)">Já comprei!</button>
+      </li>
+      <li>
+        <img src="https://th.bing.com/th/id/OIP.dSuCyCm0p3O_zrEDOkf6GAHaEP?rs=1&pid=ImgDetMain" alt="Maquiagem">
+        <span><a href = "https://pt.pandora.net/pt/contas-e-pulseiras/pulseiras/pulseiras-de-corrente/pulseira-malha-snake-e-corac%C3%A3o-moments/590719.html#cgid=jewellery" target="_blank"> Pulseira da Pandora  </a></span>
+        <button onclick="markAsCompleted(this)">Já comprei!</button>
+      </li>
+	<li>
+        <img src="https://static.bershka.net/assets/public/d50a/0a82/e0b8434fa5dd/a76277e25a8c/07069700712-a2d/07069700712-a2d.jpg?ts=1730213507252&w=800" alt="Sweat">
+        <span><a href = "https://www.bershka.com/pt/sweatshirt-capuz-padr%C3%A3o-c0p177325272.html?colorId=712" target="_blank"> Sweat   </a></span>
+        <button onclick="markAsCompleted(this)">Já comprei!</button>
+
+      </li>
+<li>
+ <img src="https://yt3.ggpht.com/-86jnhFIj1Mw/AAAAAAAAAAI/AAAAAAAAAAA/xEGv8ZCxL50/s900-c-k-no/photo.jpg" alt="Sweat">
+        <span>O meu carrinho inteiro da shein (por volta dos 100 euros)</span>
+        <button onclick="markAsCompleted(this)">Já comprei!</button>
+      </li>
+<li>
+        <img src="https://static.pullandbear.net/assets/public/4b92/b058/b65444b9b7f0/e9a03ddc4962/03590388952-A1M/03590388952-A1M.jpg?ts=1721868125061&w=708&f=auto" alt="Sweat">
+        <span><a href = "https://www.pullandbear.com/pt/sweatshirt-capuz-dado-l03590388?cS=952&pelement=621941993" target="_blank"> Sweat 2  </a></span>
+        <button onclick="markAsCompleted(this)">Já comprei!</button>
+<li>
+        <img src="https://static.pullandbear.net/assets/public/256b/90a4/af6d4cbe893f/4b9d01f58c48/07590331712-A3M/07590331712-A3M.jpg?ts=1722264372322&w=708&f=auto" alt="Sweat">
+        <span><a href = "https://www.pullandbear.com/pt/sweatshirt-com-grafico-love-yourself-team-l07590331?cS=712&pelement=630791333" target="_blank"> Sweat 3 </a></span>
+        <button onclick="markAsCompleted(this)">Já comprei!</button>
+
+
+    </ul>
+  </main>
+  <footer>
+    <p>🎄 Feliz Natal! 🎄</p>
+  </footer>
+  <script>
+    function markAsCompleted(button) {
+      const listItem = button.parentElement;
+      listItem.classList.toggle('completed');
+    }
+  </script>
+</body>
+</html>
